@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 
 app.set('view engine', 'ejs');
 
-app.use('/', require('./controllers/authentificate'));
+app.use('/', require('./controllers/authentication'));
 
 app.get('/', (req, res) => {
     if (req.session.user) {
